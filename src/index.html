@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To do list</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 class="header__title">TODO LIST</h1>
+            </header>
+            <div class="projects">
+                <h2 class="projects__title">Projects</h2>
+                <div class="projects__container-name"></div>
+
+                <button class="projects__add">+new project</button>
+
+                <button class="projects__btn-remove-project">
+                    REMOVE PROJECT
+                </button>
+            </div>
+            <div class="projects__container">
+                <div class="project__displayer">
+                    <div class="description__container">
+                        <h2>DESCRIPTION:</h2>
+                        <hr />
+                        <div class="description"></div>
+                    </div>
+                    <div class="tasks__container"></div>
+                    <div class="btns">
+                        <button class="btn__remove-task">REMOVE TASK</button>
+                        <button class="btn__new-task">
+                            <span class="btn__new-task-text">+new task</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="new-project-box-container modal">
+            <div class="new-project-box">
+                <div class="box-inputs">
+                    <div class="project-name-input">
+                        <label class="project-name-txt">Project Name</label>
+                        <input type="text" maxlength="25" class="title-input" />
+                    </div>
+                    <div class="project-description-input">
+                        <label class="project-description-txt">
+                            Project Description
+                        </label>
+                        <input
+                            type="text"
+                            maxlength="120"
+                            class="description-input"
+                        />
+                    </div>
+                </div>
+                <div class="box-btns">
+                    <button class="add-btn">add project</button>
+                    <button class="cancel-project-btn">cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="new-task-box-container">
+            <div class="new-task--box">
+                <div class="task-name">
+                    <label class="task--name-txt">Task name:</label>
+                    <input type="text" class="task-name-input" />
+                </div>
+                <div class="task-priority">
+                    <label class="task-priority-txt">Priority:</label>
+                    <select name="select">
+                        <option value="low" class="low">Low</option>
+                        <option value="medium" class="medium">Medium</option>
+                        <option value="high" class="high">High</option>
+                    </select>
+                </div>
+                <div class="due-date">
+                    <input type="date" class="dueDateInput" />
+                </div>
+                <div class="box-btns">
+                    <button class="add-task-btn">add task</button>
+                    <button class="cancel-task-btn">cancel</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

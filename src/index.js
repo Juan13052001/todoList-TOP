@@ -17,6 +17,8 @@ const divProyectoTitle = document.querySelector(".project-name-input");
 
 const btnAddProyecto = document.querySelector(".add-btn");
 
+const divProyectos = document.querySelector(".projects__container-name");
+
 buttonAdd.addEventListener("click", (e) => {
     console.log(e);
     addProyectoModal.style.display = "block";
@@ -25,8 +27,24 @@ buttonAdd.addEventListener("click", (e) => {
 btnAddProyecto.addEventListener("click", (e) => {
     let title = inputTitleProyecto.value;
     let description = inputDescriptionProyecto.value;
-
-    todoList.addProyecto(title, description);
-    console.log(todoList);
-    addProyectoModal.style.display = "none";
+    if (title.length > 0 && description.length > 0) {
+        inputTitleProyecto.value = "";
+        inputDescriptionProyecto.value = "";
+        todoList.addProyecto(title, description);
+        console.log(todoList);
+        addProyectoModal.style.display = "none";
+        mostrarProyectos();
+    } else {
+        alert("Por favor llena los datos correspondientes");
+    }
 });
+
+function mostrarProyectos() {
+    divProyectos.textContent = "";
+    todoList.proyectos.forEach((proyecto) => {
+        const newProyecto = document.createElement("h4");
+        newProyecto.classList.add("proyectos");
+        newProyecto.innerText = proyecto.title;
+        divProyectos.append(newProyecto);
+    });
+}

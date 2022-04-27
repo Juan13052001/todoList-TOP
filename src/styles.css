@@ -77,8 +77,17 @@ button {
     font-style: normal;
 }
 
+.proyectos:hover {
+    transform: scale(1.1);
+}
+
 .projects__title {
     font-size: 60px;
+}
+
+.activo {
+    border: 4px solid var(--pink-lavender);
+    background-color: var(--selective-yellow);
 }
 
 .description__container {
@@ -96,6 +105,11 @@ button {
     text-transform: uppercase;
     border: none;
     background-color: var(--selective-yellow);
+}
+
+.projects__add:hover,
+.projects__btn-remove-project:hover {
+    transform: scale(1.2);
 }
 
 .projects__btn-remove-project {
@@ -182,15 +196,23 @@ button {
 .projects__container {
     grid-area: container;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     border: 3px solid #333;
 }
 
 .project__displayer {
     height: 100%;
     padding: 20px 50px;
+    display: none;
 }
 
+.description {
+    height: 50px;
+}
+
+.show {
+    display: block;
+}
 .btn__remove-task {
     width: 175px;
     font-size: 20px;
@@ -200,7 +222,16 @@ button {
     height: 35px;
     text-transform: uppercase;
     position: absolute;
-    top: 40rem;
+    top: 31.25rem;
+    left: 30rem;
+    background-color: tomato;
+}
+
+.btn__remove-task:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: red;
+    color: white;
 }
 
 .btn__new-task {
@@ -208,10 +239,20 @@ button {
     height: 35px;
     font-size: 20px;
     margin: 20px 15px;
+    border: none;
     border-radius: 20px;
     text-transform: uppercase;
     position: relative;
-    left: 30.5em;
+    top: -3.1875rem;
+    left: 40.5rem;
+    background-color: var(--uranian-blue);
+}
+
+.btn__new-task:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: var(--prussian-blue);
+    color: white;
 }
 
 .new-task-box-container {
@@ -255,8 +296,40 @@ select {
     font-size: 20px;
 }
 
+.tarea {
+    margin: 20px auto;
+    width: 60%;
+    height: 45px;
+    font-size: 27px;
+    padding: 5px 20px;
+    background-color: #eee;
+    font-weight: normal;
+}
+
+.tarea:hover {
+    transform: scale(1.3);
+}
+
+.task-activo {
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.low-tarea {
+    border-left: 10px solid greenyellow;
+}
+
 .low {
     background-color: greenyellow;
+}
+
+.medium-tarea {
+    border-left: 10px solid rgb(250, 213, 48);
+}
+
+.high-tarea {
+    border-left: 10px solid red;
 }
 
 .medium {

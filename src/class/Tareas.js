@@ -1,7 +1,8 @@
 class Tareas {
-    constructor(title, priority) {
+    constructor(title, priority, dueDate) {
         this.title = title;
         this.priority = priority;
+        this.dueDate = dueDate;
         // this.proyecto = proyectos.find((p) => p.title == proyecto);
         // proyecto.tasks.push(task);
         // updateProyectosLocalStorage();

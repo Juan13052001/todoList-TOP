@@ -44,10 +44,18 @@ const btnAddNewTask = document.querySelector(".btn__new-task");
 
 const btnAddTask = document.querySelector(".add-task-btn");
 
+/**
+ * Devuelve una NodeList de todos los elementos con el nombre de clase "proyectos"
+ * @returns Un NodeList de todos los elementos con la clase de proyectos.
+ */
 let getAllProyectos = () => {
     return document.querySelectorAll(".proyectos");
 };
 
+/**
+ * Toma los valores de las entradas, los borra, agrega el nuevo proyecto al objeto todoList, oculta el
+ * modal y luego muestra los proyectos.
+ */
 function addProyecto() {
     let title = inputTitleProyecto.value;
     let description = inputDescriptionProyecto.value;
@@ -64,14 +72,24 @@ function addProyecto() {
     }
 }
 
+/**
+ * La función hideModal() se llama cuando el usuario hace clic en el botón de cerrar del modal
+ */
 function hideModal() {
     addProyectoModal.style.display = "none";
 }
 
+/**
+ * La función showModal() se llama cuando el usuario hace clic en el botón con el id
+ * "addProyectoButton". Cuando se llama a la función, se muestra el modal con el id "addProyectoModal"
+ */
 function showModal() {
     addProyectoModal.style.display = "block";
 }
-
+/**
+ * Crea un nuevo elemento HTML, le agrega una clase, le agrega el título del proyecto y luego lo agrega
+ * al elemento divProyectos
+ */
 function mostrarProyectos() {
     divProyectos.textContent = "";
     todoList.proyectos.forEach((proyecto) => {
@@ -82,10 +100,18 @@ function mostrarProyectos() {
     });
 }
 
+/**
+ * Devuelve el texto del elemento con la clase "activo"
+ * @returns El texto interior del elemento con la clase "activo"
+ */
 function getActivo() {
     return document.querySelector(".activo").innerText;
 }
 
+/**
+ * Devuelve el proyecto que está actualmente activo
+ * @returns the proyectoActivo variable.
+ */
 function getProyecto() {
     const nameProyecto = getActivo();
     const proyectoActivo = todoList.proyectos.filter(
@@ -94,6 +120,12 @@ function getProyecto() {
     return proyectoActivo;
 }
 
+/**
+ * It removes the active class from the previous element, adds the active class to the current element,
+ * adds the show class to the description container, gets the current project, shows the description of
+ * the current project, and shows the tasks of the current project
+ * @param e - The event object
+ */
 function handleProyectoClick(e) {
     removeActivoClass();
     addActivoClass(e);
@@ -103,6 +135,12 @@ function handleProyectoClick(e) {
     mostrarTareas();
 }
 
+/**
+ * Agrega la clase "show" al elemento con el id "proyectosDescription" y luego llama a dos funciones,
+ * una para mostrar la descripción del proyecto y la otra para mostrar las tareas.
+ * @param e - El objeto de evento.
+ */
+
 function actualizarProyecto(e) {
     proyectosDescription.classList.add("show");
     const proyecto = getProyecto();
@@ -110,6 +148,9 @@ function actualizarProyecto(e) {
     mostrarTareas();
 }
 
+/**
+ * Elimina la clase "activo" de todos los divs con la clase "proyecto"
+ */
 function removeActivoClass() {
     const divsProyectos = getAllProyectos();
     [...divsProyectos].forEach((proyecto) => {
@@ -117,10 +158,17 @@ function removeActivoClass() {
     });
 }
 
+/**
+ * Cuando el usuario haga clic en un elemento, agregue la clase 'activo' a ese elemento.
+ * @param e - El objeto de evento.
+ */
 function addActivoClass(e) {
     e.target.classList.add("activo");
 }
 
+/**
+ * Elimina el proyecto que está actualmente activo
+ */
 function removerProyecto() {
     const proyectoName = getActivo();
     todoList.removeProyecto(proyectoName);
@@ -129,12 +177,23 @@ function removerProyecto() {
     mostrarTareas();
 }
 
+/**
+ * Toma un objeto de proyecto como argumento y establece el texto interno del elemento de descripción
+ * en la propiedad de descripción del objeto de proyecto.
+ * @param proyecto - el objeto que contiene los datos del proyecto
+ */
 function mostrarDescription(proyecto) {
     description.innerText = proyecto.description;
 }
+/**
+ * Toma un parámetro llamado proyecto, que es una matriz de objetos, y establece el texto interno del
+ * elemento de descripción en la propiedad de descripción del primer objeto de la matriz.
+ * @param proyecto - la matriz de objetos que contiene la información del proyecto.
+ */
 function mostrarDescriptionAlClick(proyecto) {
     description.innerText = proyecto[0].description;
 }
+/* Agrega un detector de eventos a cada proyecto. */
 function addEventos() {
     const Proyectos = getAllProyectos();
     [...Proyectos].forEach((proyecto) => {
@@ -142,6 +201,7 @@ function addEventos() {
     });
 }
 
+/* Mostrando las tareas del proyecto actual. */
 function mostrarTareas() {
     containerTareas.textContent = "";
     const proyectoActivo = getActivo();
@@ -165,6 +225,11 @@ function mostrarTareas() {
     });
 }
 
+/**
+ * Selecciona todas las tareas, elimina la clase "tarea-activo" de todas ellas y luego agrega la clase
+ * "tarea-activo" a la tarea en la que se hizo clic.
+ * @param e - El objeto de evento.
+ */
 function seleccionarTarea(e) {
     const tasksAll = document.querySelectorAll(".tarea");
     [...tasksAll].forEach((tarea) => {
@@ -173,6 +238,7 @@ function seleccionarTarea(e) {
     e.target.classList.add("task-activo");
 }
 
+/* Elimina la tarea que está actualmente activa. */
 function removeTarea() {
     const proyectoName = getActivo();
     const proyecto = document.querySelector(".activo");
@@ -182,15 +248,18 @@ function removeTarea() {
     mostrarTareas();
 }
 
+/* Mostrando el modal para agregar una nueva tarea. */
 function showModalTask() {
     addTaskModal.style.display = "block";
 }
 
+/* Ocultar el modal para agregar una nueva tarea. */
 function ocultarModalTask() {
     addTaskModal.style.display = "none";
     taskInputName.value = "";
 }
 
+/* Agregar una nueva tarea al proyecto actual. */
 function addTask() {
     if (
         taskInputName.value.length > 0 &&
@@ -225,4 +294,6 @@ btnCancelTask.addEventListener("click", ocultarModalTask);
 
 btnRemoveTask.addEventListener("click", removeTarea);
 
+/* Exportando las funciones mostrarProyectos y addEventos para que puedan ser utilizadas en otros
+archivos. */
 export { mostrarProyectos, addEventos };

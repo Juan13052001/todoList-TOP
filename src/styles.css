@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap");
 
 :root {
+    --independence: #4a4e69ff;
     --light-cornflower-blue: #8ecae6ff;
     --blue-green: #219ebcff;
     --prussian-blue: #023047ff;
@@ -11,6 +12,13 @@
     --nadeshiko-pink: #ffafccff;
     --uranian-blue: #bde0feff;
     --baby-blue-eyes: #a2d2ffff;
+    --imperial-red: #ef233cff;
+    --amaranth-red: #d90429ff;
+    --android-green: #aacc00ff;
+    --granny-smith-apple: #adf6b1ff;
+    --cadet-blue: #38a3a5ff;
+    --red-crayola: #ef2d56ff;
+    --candy-pink: #db6c79ff;
     --title: "Lobster", cursive;
     --subtitle: "Montserrat", sans-serif;
 }
@@ -27,6 +35,7 @@ h4,
 h5,
 h6 {
     font-family: var(--title);
+    font-weight: normal;
 }
 
 button {
@@ -60,7 +69,7 @@ button {
     grid-area: nav;
     width: 100%;
     height: 100%;
-    border: 4px solid #333;
+    background-color: var(--independence);
     text-align: center;
 }
 
@@ -83,6 +92,12 @@ button {
 
 .projects__title {
     font-size: 60px;
+    color: white;
+    font-weight: normal;
+}
+
+.cancel-project-btn {
+    background-color: var(--red-crayola);
 }
 
 .activo {
@@ -150,7 +165,7 @@ button {
     position: relative;
     top: 250px;
     margin: auto;
-    background-color: var(--orchid-pink);
+    background-color: var(--candy-pink);
     padding: 20px;
 }
 
@@ -197,7 +212,8 @@ button {
     grid-area: container;
     width: 100%;
     height: 100%;
-    border: 3px solid #333;
+    background-color: var(--light-cornflower-blue);
+    border: 15px solid var(--uranian-blue);
 }
 
 .project__displayer {
@@ -224,18 +240,19 @@ button {
     position: absolute;
     top: 31.25rem;
     left: 30rem;
-    background-color: tomato;
+    background-color: var(--amaranth-red);
+    color: white;
 }
 
 .btn__remove-task:hover {
     cursor: pointer;
     transform: scale(1.2);
-    background-color: red;
+    background-color: var(--imperial-red);
     color: white;
 }
 
 .btn__new-task {
-    width: 125px;
+    width: 145px;
     height: 35px;
     font-size: 20px;
     margin: 20px 15px;
@@ -245,7 +262,8 @@ button {
     position: relative;
     top: -3.1875rem;
     left: 40.5rem;
-    background-color: var(--uranian-blue);
+    background-color: var(--cadet-blue);
+    color: white;
 }
 
 .btn__new-task:hover {
@@ -267,6 +285,18 @@ button {
     padding: 10px;
     text-align: center;
     display: none;
+}
+
+.add-btn {
+    background-color: var(--granny-smith-apple);
+}
+
+.add-task-btn {
+    background-color: var(--granny-smith-apple);
+}
+
+.cancel-task-btn {
+    background-color: var(--candy-pink);
 }
 
 .task--name-txt,
@@ -317,11 +347,11 @@ select {
 }
 
 .low-tarea {
-    border-left: 10px solid greenyellow;
+    border-left: 10px solid var(--android-green);
 }
 
 .low {
-    background-color: greenyellow;
+    background-color: var(--android-green);
 }
 
 .medium-tarea {
@@ -329,7 +359,7 @@ select {
 }
 
 .high-tarea {
-    border-left: 10px solid red;
+    border-left: 10px solid var(--imperial-red);
 }
 
 .medium {
@@ -337,7 +367,7 @@ select {
 }
 
 .high {
-    background-color: red;
+    background-color: var(--imperial-red);
 }
 
 .dueDateInput {

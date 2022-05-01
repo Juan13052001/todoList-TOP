@@ -1,32 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --independence: #4a4e69ff;
-    --light-cornflower-blue: #8ecae6ff;
-    --blue-green: #219ebcff;
-    --prussian-blue: #023047ff;
-    --selective-yellow: #ffb703ff;
-    --tangerine: #fb8500ff;
-    --pink-lavender: #cdb4dbff;
-    --orchid-pink: #ffc8ddff;
-    --nadeshiko-pink: #ffafccff;
-    --uranian-blue: #bde0feff;
-    --baby-blue-eyes: #a2d2ffff;
-    --imperial-red: #ef233cff;
-    --amaranth-red: #d90429ff;
-    --android-green: #aacc00ff;
-    --granny-smith-apple: #adf6b1ff;
-    --cadet-blue: #38a3a5ff;
-    --red-crayola: #ef2d56ff;
-    --candy-pink: #db6c79ff;
-    --title: "Lobster", cursive;
-    --subtitle: "Montserrat", sans-serif;
+  --independence: #4a4e69ff;
+  --light-cornflower-blue: #8ecae6ff;
+  --blue-green: #219ebcff;
+  --prussian-blue: #023047ff;
+  --selective-yellow: #ffb703ff;
+  --tangerine: #fb8500ff;
+  --pink-lavender: #cdb4dbff;
+  --orchid-pink: #ffc8ddff;
+  --nadeshiko-pink: #ffafccff;
+  --uranian-blue: #bde0feff;
+  --baby-blue-eyes: #a2d2ffff;
+  --imperial-red: #ef233cff;
+  --amaranth-red: #d90429ff;
+  --android-green: #aacc00ff;
+  --granny-smith-apple: #adf6b1ff;
+  --cadet-blue: #38a3a5ff;
+  --red-crayola: #ef2d56ff;
+  --candy-pink: #db6c79ff;
+  --title: 'Lobster', cursive;
+  --subtitle: 'Montserrat', sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 h1,
 h2,
@@ -34,347 +34,347 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--title);
-    font-weight: normal;
+  font-family: var(--title);
+  font-weight: normal;
 }
 
 button {
-    font-family: var(--subtitle);
+  font-family: var(--subtitle);
 }
 
 .container {
-    display: grid;
-    grid-template-areas:
-        "header header header"
-        "nav container container"
-        "nav container container";
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'nav container container'
+    'nav container container';
 }
 
 .header {
-    grid-area: header;
-    background-color: var(--blue-green);
-    border: 1px solid #333;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    color: whitesmoke;
+  grid-area: header;
+  background-color: var(--blue-green);
+  border: 1px solid #333;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: whitesmoke;
 }
 
 .projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    grid-area: nav;
-    width: 100%;
-    height: 100%;
-    background-color: var(--independence);
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
+  background-color: var(--independence);
+  text-align: center;
 }
 
 .proyectos {
-    width: 150px;
-    height: 40px;
-    font-size: 24px;
-    border: 4px solid var(--orchid-pink);
-    border-radius: 5px 0 0 5px;
-    margin: 10px auto;
-    cursor: pointer;
-    background-color: var(--blue-green);
-    font-weight: normal;
-    font-style: normal;
+  width: 150px;
+  height: 40px;
+  font-size: 24px;
+  border: 4px solid var(--orchid-pink);
+  border-radius: 5px 0 0 5px;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: var(--blue-green);
+  font-weight: normal;
+  font-style: normal;
 }
 
 .proyectos:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .projects__title {
-    font-size: 60px;
-    color: white;
-    font-weight: normal;
+  font-size: 60px;
+  color: white;
+  font-weight: normal;
 }
 
 .cancel-project-btn {
-    background-color: var(--red-crayola);
+  background-color: var(--red-crayola);
 }
 
 .activo {
-    border: 4px solid var(--pink-lavender);
-    background-color: var(--selective-yellow);
+  border: 4px solid var(--pink-lavender);
+  background-color: var(--selective-yellow);
 }
 
 .description__container {
-    font-size: 45px;
+  font-size: 45px;
 }
 
 .projects__add {
-    font-weight: bold;
-    width: 300px;
-    height: 45px;
-    margin: auto;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-    border: none;
-    background-color: var(--selective-yellow);
+  font-weight: bold;
+  width: 300px;
+  height: 45px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--selective-yellow);
 }
 
 .projects__add:hover,
 .projects__btn-remove-project:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .projects__btn-remove-project {
-    font-weight: bold;
-    width: 300px;
-    height: 45px;
-    margin: auto;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-    border: none;
-    background-color: var(--light-cornflower-blue);
+  font-weight: bold;
+  width: 300px;
+  height: 45px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--light-cornflower-blue);
 }
 
 .projects__container-name {
-    height: 300px;
+  height: 300px;
 }
 
 .new-project-box-container {
-    border: 4px solid #333;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 40px;
-    display: none;
-    background-color: rgba(51, 51, 51, 0.4);
+  border: 4px solid #333;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 40px;
+  display: none;
+  background-color: rgba(51, 51, 51, 0.4);
 }
 
 .new-project-box {
-    width: 550px;
-    height: 300px;
-    position: relative;
-    top: 250px;
-    margin: auto;
-    background-color: var(--candy-pink);
-    padding: 20px;
+  width: 550px;
+  height: 300px;
+  position: relative;
+  top: 250px;
+  margin: auto;
+  background-color: var(--candy-pink);
+  padding: 20px;
 }
 
 .project-name-input,
 .project-description-input {
-    margin: 5px;
+  margin: 5px;
 }
 
 .project-name-txt,
 .project-description-txt {
-    font-size: 24px;
-    margin: 5px;
+  font-size: 24px;
+  margin: 5px;
 }
 
 .title-input,
 .description-input {
-    outline: none;
-    border: 1px solid #333;
-    display: block;
-    width: 250px;
-    height: 30px;
-    margin: 10px auto;
-    border-radius: 20px;
-    font-size: 20px;
-    padding: 0 15px;
+  outline: none;
+  border: 1px solid #333;
+  display: block;
+  width: 250px;
+  height: 30px;
+  margin: 10px auto;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 0 15px;
 }
 
 .box-btns button {
-    width: 175px;
-    font-size: 20px;
-    margin: 20px 15px;
-    border: none;
-    border-radius: 20px;
-    height: 35px;
-    text-transform: uppercase;
+  width: 175px;
+  font-size: 20px;
+  margin: 20px 15px;
+  border: none;
+  border-radius: 20px;
+  height: 35px;
+  text-transform: uppercase;
 }
 
 .box-btns button:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .projects__container {
-    grid-area: container;
-    width: 100%;
-    height: 100%;
-    background-color: var(--light-cornflower-blue);
-    border: 15px solid var(--uranian-blue);
+  grid-area: container;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-cornflower-blue);
+  border: 15px solid var(--uranian-blue);
 }
 
 .project__displayer {
-    height: 100%;
-    padding: 20px 50px;
-    display: none;
+  height: 100%;
+  padding: 20px 50px;
+  display: none;
 }
 
 .description {
-    height: 50px;
+  height: 50px;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 .btn__remove-task {
-    width: 175px;
-    font-size: 20px;
-    margin: 20px 15px;
-    border: none;
-    border-radius: 20px;
-    height: 35px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 31.25rem;
-    left: 30rem;
-    background-color: var(--amaranth-red);
-    color: white;
+  width: 175px;
+  font-size: 20px;
+  margin: 20px 15px;
+  border: none;
+  border-radius: 20px;
+  height: 35px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 31.25rem;
+  left: 30rem;
+  background-color: var(--amaranth-red);
+  color: white;
 }
 
 .btn__remove-task:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    background-color: var(--imperial-red);
-    color: white;
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: var(--imperial-red);
+  color: white;
 }
 
 .btn__new-task {
-    width: 145px;
-    height: 35px;
-    font-size: 20px;
-    margin: 20px 15px;
-    border: none;
-    border-radius: 20px;
-    text-transform: uppercase;
-    position: relative;
-    top: -3.1875rem;
-    left: 40.5rem;
-    background-color: var(--cadet-blue);
-    color: white;
+  width: 145px;
+  height: 35px;
+  font-size: 20px;
+  margin: 20px 15px;
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  position: relative;
+  top: -3.1875rem;
+  left: 40.5rem;
+  background-color: var(--cadet-blue);
+  color: white;
 }
 
 .btn__new-task:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    background-color: var(--prussian-blue);
-    color: white;
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: var(--prussian-blue);
+  color: white;
 }
 
 .new-task-box-container {
-    border: 4px solid #333;
-    width: 550px;
-    height: 350px;
-    position: absolute;
-    top: 250px;
-    background-color: white;
-    left: 30em;
-    border-radius: 30px;
-    padding: 10px;
-    text-align: center;
-    display: none;
+  border: 4px solid #333;
+  width: 550px;
+  height: 350px;
+  position: absolute;
+  top: 250px;
+  background-color: white;
+  left: 30em;
+  border-radius: 30px;
+  padding: 10px;
+  text-align: center;
+  display: none;
 }
 
 .add-btn {
-    background-color: var(--granny-smith-apple);
+  background-color: var(--granny-smith-apple);
 }
 
 .add-task-btn {
-    background-color: var(--granny-smith-apple);
+  background-color: var(--granny-smith-apple);
 }
 
 .cancel-task-btn {
-    background-color: var(--candy-pink);
+  background-color: var(--candy-pink);
 }
 
 .task--name-txt,
 .task-priority-txt {
-    display: block;
-    font-size: 24px;
-    margin: 7.5px;
+  display: block;
+  font-size: 24px;
+  margin: 7.5px;
 }
 
 .task-name-input {
-    height: 35px;
-    padding: 0 10px;
-    font-size: 20px;
-    width: 300px;
-    outline: none;
-    border: 2px solid #333;
-    border-radius: 30px;
-    margin: 5px;
+  height: 35px;
+  padding: 0 10px;
+  font-size: 20px;
+  width: 300px;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 30px;
+  margin: 5px;
 }
 
 select {
-    width: 150px;
-    height: 35px;
-    margin: 10px;
-    border: 3px solid black;
-    border-radius: 20px;
-    font-size: 20px;
+  width: 150px;
+  height: 35px;
+  margin: 10px;
+  border: 3px solid black;
+  border-radius: 20px;
+  font-size: 20px;
 }
 
 .tarea {
-    margin: 20px auto;
-    width: 60%;
-    height: 45px;
-    font-size: 27px;
-    padding: 5px 20px;
-    background-color: #eee;
-    font-weight: normal;
+  margin: 20px auto;
+  width: 60%;
+  height: 45px;
+  font-size: 27px;
+  padding: 5px 20px;
+  background-color: #eee;
+  font-weight: normal;
 }
 
 .tarea:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .task-activo {
-    border-bottom: 3px solid black;
-    border-right: 3px solid black;
-    border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-top: 3px solid black;
 }
 
 .low-tarea {
-    border-left: 10px solid var(--android-green);
+  border-left: 10px solid var(--android-green);
 }
 
 .low {
-    background-color: var(--android-green);
+  background-color: var(--android-green);
 }
 
 .medium-tarea {
-    border-left: 10px solid rgb(250, 213, 48);
+  border-left: 10px solid rgb(250, 213, 48);
 }
 
 .high-tarea {
-    border-left: 10px solid var(--imperial-red);
+  border-left: 10px solid var(--imperial-red);
 }
 
 .medium {
-    background-color: rgb(250, 213, 48);
+  background-color: rgb(250, 213, 48);
 }
 
 .high {
-    background-color: var(--imperial-red);
+  background-color: var(--imperial-red);
 }
 
 .dueDateInput {
-    outline: none;
-    border: 3px solid #333;
-    width: 150px;
-    height: 30px;
-    border-radius: 10px;
-    margin: 5px;
+  outline: none;
+  border: 3px solid #333;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 5px;
 }
